@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Solutions | GlobalBridge Logistics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-dark: #0f172a;
+            --navy-primary: #1e293b;
+            --silver-accent: #94a3b8;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Lexend', sans-serif;
+        }
+        .solutions-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.8)), 
+                        url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .solution-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .solution-card:hover {
+            transform: translateY(-10px);
+            border-color: #3b82f6;
+        }
+        .industry-overlay {
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.95), transparent);
+        }
+        .footer-gradient {
+            background: linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.92)), 
+                        url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+        }
+        .stats-gradient {
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 nav-scrolled">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="bg-blue-600 p-2 rounded-lg">
+                        <i class="fas fa-bridge text-white text-xl"></i>
+                    </div>
+                    <span class="text-white text-2xl font-bold tracking-tight">GlobalBridge</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-slate-200 font-medium">
+                <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+                <a href="#" class="text-blue-400">Solutions</a>
+                <a href="tracking.html" class="hover:text-blue-400 transition">Tracking</a>
+                <a href="support.html" class="hover:text-blue-400 transition">Support</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg">
+                    Request Quote
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="solutions-hero pt-48 pb-32 text-center text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">End-to-End Supply Chain Excellence</h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                From local distribution to complex international freight forwarding, we bridge the gap between your products and your customers.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Solutions Grid -->
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Ocean Freight -->
+            <div class="solution-card bg-white rounded-3xl p-10 shadow-sm border border-slate-100 group">
+                <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-ship"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-navy-dark mb-4">Ocean Freight</h3>
+                <p class="text-slate-500 mb-6 leading-relaxed">Cost-effective shipping solutions for large volume cargo. FCL and LCL options available across all major global trade lanes.</p>
+                <ul class="space-y-3 mb-8 text-sm font-medium text-slate-700">
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Door-to-Port / Port-to-Door</li>
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Container Stripping</li>
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Refrigerated Containers</li>
+                </ul>
+                <a href="#" class="text-blue-600 font-bold flex items-center hover:translate-x-2 transition-transform">
+                    View Details <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- Air Freight -->
+            <div class="solution-card bg-white rounded-3xl p-10 shadow-sm border border-slate-100 group">
+                <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-plane-departure"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-navy-dark mb-4">Air Freight</h3>
+                <p class="text-slate-500 mb-6 leading-relaxed">Time-critical delivery services for high-value goods. Priority boarding and express clearance guaranteed.</p>
+                <ul class="space-y-3 mb-8 text-sm font-medium text-slate-700">
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Next Flight Out (NFO)</li>
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Chartered Aircraft</li>
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> IATA Accredited</li>
+                </ul>
+                <a href="#" class="text-blue-600 font-bold flex items-center hover:translate-x-2 transition-transform">
+                    View Details <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- Land Transport -->
+            <div class="solution-card bg-white rounded-3xl p-10 shadow-sm border border-slate-100 group">
+                <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-truck-fast"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-navy-dark mb-4">Land Transport</h3>
+                <p class="text-slate-500 mb-6 leading-relaxed">Seamless last-mile delivery and interstate haulage with real-time GPS fleet monitoring and optimization.</p>
+                <ul class="space-y-3 mb-8 text-sm font-medium text-slate-700">
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> LTL & FTL Services</li>
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Hazardous Materials</li>
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Intermodal Delivery</li>
+                </ul>
+                <a href="#" class="text-blue-600 font-bold flex items-center hover:translate-x-2 transition-transform">
+                    View Details <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Focus Section -->
+    <section class="py-24 stats-gradient text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Industry Specific Expertise</h2>
+                    <p class="text-slate-400 text-lg">We don't just ship boxes; we understand the unique demands of your specific sector.</p>
+                </div>
+                <button class="border border-slate-700 hover:bg-slate-800 px-8 py-3 rounded-xl font-bold transition">View All Industries</button>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pharma -->
+                <div class="relative h-80 rounded-3xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1587854680352-936b22b91030?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Pharmaceuticals">
+                    <div class="absolute inset-0 industry-overlay flex flex-col justify-end p-8">
+                        <h4 class="text-xl font-bold mb-2">Pharmaceuticals</h4>
+                        <p class="text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Cold-chain certified logistics for sensitive medical supplies.</p>
+                    </div>
+                </div>
+                <!-- Tech -->
+                <div class="relative h-80 rounded-3xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Tech">
+                    <div class="absolute inset-0 industry-overlay flex flex-col justify-end p-8">
+                        <h4 class="text-xl font-bold mb-2">High-Tech</h4>
+                        <p class="text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Secure transport for delicate electronics and hardware.</p>
+                    </div>
+                </div>
+                <!-- Retail -->
+                <div class="relative h-80 rounded-3xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Retail">
+                    <div class="absolute inset-0 industry-overlay flex flex-col justify-end p-8">
+                        <h4 class="text-xl font-bold mb-2">Retail & E-comm</h4>
+                        <p class="text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Fast-moving consumer goods and omnichannel fulfillment.</p>
+                    </div>
+                </div>
+                <!-- Automotive -->
+                <div class="relative h-80 rounded-3xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Automotive">
+                    <div class="absolute inset-0 industry-overlay flex flex-col justify-end p-8">
+                        <h4 class="text-xl font-bold mb-2">Automotive</h4>
+                        <p class="text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Just-in-time delivery for manufacturing and spare parts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Add Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+            <div>
+                <span class="text-blue-600 font-black tracking-widest text-xs uppercase mb-4 block">Advanced Capabilities</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-navy-dark mb-8">Beyond Transportation</h2>
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1 text-blue-600"><i class="fas fa-warehouse text-xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Smart Warehousing</h4>
+                            <p class="text-slate-500">Inventory management with AI-driven demand forecasting and automated sorting.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1 text-blue-600"><i class="fas fa-file-shield text-xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Customs Brokerage</h4>
+                            <p class="text-slate-500">Navigate complex international regulations with our in-house compliance experts.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1 text-blue-600"><i class="fas fa-leaf text-xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Sustainability Reporting</h4>
+                            <p class="text-slate-500">Detailed carbon footprint analytics for every shipment to help meet your ESG goals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-4 bg-blue-600/5 rounded-3xl -rotate-2"></div>
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200" class="relative rounded-3xl shadow-2xl z-10" alt="Logistics Center">
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden lg:block">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-bold uppercase">Average Speed</p>
+                            <p class="text-xl font-bold text-navy-dark">15% Faster Delivery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-gradient text-slate-400 pt-24 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 relative z-10">
+            <div class="space-y-6">
+                <div class="flex items-center space-x-2 text-white">
+                    <div class="bg-blue-600 p-1.5 rounded">
+                        <i class="fas fa-bridge text-white text-lg"></i>
+                    </div>
+                    <span class="text-2xl font-bold">GlobalBridge</span>
+                </div>
+                <p class="text-sm leading-relaxed">
+                    Connecting global markets through intelligent logistics and sustainable supply chain solutions.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Explore</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="index.html" class="hover:text-blue-400 transition-colors">Home Page</a></li>
+                    <li><a href="tracking.html" class="hover:text-blue-400 transition-colors">Shipment Tracking</a></li>
+                    <li><a href="support.html" class="hover:text-blue-400 transition-colors">Support Center</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Solutions</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Ocean Freight</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Air Freight</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Warehousing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Contact Info</h4>
+                <div class="space-y-5 text-sm">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-map-marker-alt text-blue-500 mt-1"></i>
+                        <span>124-126 Business Pkwy, London, UK</span>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-phone text-blue-500 mt-1"></i>
+                        <span>+1 (800) 555-BRIDGE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-10 border-t border-white/10 text-center text-xs relative z-10">
+            <p>&copy; 2024 GlobalBridge Logistics Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

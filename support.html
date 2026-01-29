@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center | GlobalBridge Logistics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-dark: #0f172a;
+            --navy-primary: #1e293b;
+            --silver-accent: #94a3b8;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Lexend', sans-serif;
+        }
+        .support-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), 
+                        url('https://images.unsplash.com/photo-1521791136364-798a7bc0d262?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+        .footer-gradient {
+            background: linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.92)), 
+                        url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 nav-scrolled">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="bg-blue-600 p-2 rounded-lg">
+                        <i class="fas fa-bridge text-white text-xl"></i>
+                    </div>
+                    <span class="text-white text-2xl font-bold tracking-tight">GlobalBridge</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-slate-200 font-medium">
+                <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+                <a href="#" class="text-blue-400">Knowledge Base</a>
+                <a href="#" class="hover:text-blue-400 transition">Community</a>
+                <a href="#contact-form" class="hover:text-blue-400 transition">Open Ticket</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg">
+                    Track Shipment
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Support Hero -->
+    <header class="support-hero pt-48 pb-32 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">How can we help you?</h1>
+            <p class="text-xl text-slate-300 mb-10">Search our knowledge base for shipping guides, documentation, and troubleshooting.</p>
+            <div class="relative max-w-2xl mx-auto">
+                <input type="text" placeholder="Search for shipping rates, customs forms, tracking..." class="w-full py-5 px-14 rounded-2xl bg-white shadow-2xl text-slate-800 focus:outline-none focus:ring-4 focus:ring-blue-500/20 transition text-lg">
+                <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 text-xl"></i>
+                <button class="absolute right-3 top-1/2 -translate-y-1/2 bg-blue-600 text-white px-6 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Help Categories -->
+    <section class="py-20 -mt-16 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 text-center hover-lift cursor-pointer">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Shipping Basics</h3>
+                    <p class="text-slate-500 text-sm">Packaging guidelines and weight limits.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 text-center hover-lift cursor-pointer">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Billing & Invoices</h3>
+                    <p class="text-slate-500 text-sm">Manage payments and tariff reports.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 text-center hover-lift cursor-pointer">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Customs & Duties</h3>
+                    <p class="text-slate-500 text-sm">Import/Export compliance documents.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 text-center hover-lift cursor-pointer">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Claims & Insurance</h3>
+                    <p class="text-slate-500 text-sm">File a claim for damaged goods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ & Trending -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-16">
+            <div class="lg:col-span-2">
+                <h2 class="text-3xl font-bold text-navy-dark mb-8">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <div class="border border-slate-200 rounded-2xl p-6 hover:bg-slate-50 cursor-pointer transition">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-semibold">How long does international air freight typically take?</h4>
+                            <i class="fas fa-plus text-slate-400"></i>
+                        </div>
+                    </div>
+                    <div class="border border-slate-200 rounded-2xl p-6 hover:bg-slate-50 cursor-pointer transition">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-semibold">What documents are required for shipping to the EU post-Brexit?</h4>
+                            <i class="fas fa-plus text-slate-400"></i>
+                        </div>
+                    </div>
+                    <div class="border border-slate-200 rounded-2xl p-6 hover:bg-slate-50 cursor-pointer transition">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-semibold">Can I schedule a pickup for hazardous materials?</h4>
+                            <i class="fas fa-plus text-slate-400"></i>
+                        </div>
+                    </div>
+                    <div class="border border-slate-200 rounded-2xl p-6 hover:bg-slate-50 cursor-pointer transition">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-semibold">What is the maximum weight for a standard container?</h4>
+                            <i class="fas fa-plus text-slate-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar / Trending -->
+            <div class="bg-slate-50 p-8 rounded-3xl h-fit">
+                <h3 class="text-xl font-bold text-navy-dark mb-6">Trending Topics</h3>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#" class="flex items-start group">
+                            <i class="fas fa-circle-dot text-blue-500 mt-1 mr-3 text-[8px]"></i>
+                            <span class="text-slate-600 group-hover:text-blue-600 transition">Updated fuel surcharge rates for 2024</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-start group">
+                            <i class="fas fa-circle-dot text-blue-500 mt-1 mr-3 text-[8px]"></i>
+                            <span class="text-slate-600 group-hover:text-blue-600 transition">New environmental compliance in Singapore</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-start group">
+                            <i class="fas fa-circle-dot text-blue-500 mt-1 mr-3 text-[8px]"></i>
+                            <span class="text-slate-600 group-hover:text-blue-600 transition">Digital Port Clearance procedures</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="mt-10 p-6 bg-blue-600 rounded-2xl text-white">
+                    <h4 class="font-bold mb-2">Need immediate help?</h4>
+                    <p class="text-sm opacity-90 mb-4 text-white">Our average chat response time is less than 2 minutes.</p>
+                    <button class="w-full bg-white text-blue-600 py-3 rounded-xl font-bold hover:bg-slate-100 transition">Start Live Chat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Ticket Form -->
+    <section id="contact-form" class="py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy-dark mb-4">Submit a Support Ticket</h2>
+                <p class="text-slate-600">Can't find what you're looking for? Our experts are here to help.</p>
+            </div>
+            
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-slate-700">Full Name</label>
+                            <input type="text" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-slate-700">Work Email</label>
+                            <input type="email" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-slate-700">Issue Category</label>
+                        <select class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 focus:outline-none focus:border-blue-500 transition">
+                            <option>Technical Support</option>
+                            <option>Shipping Delay</option>
+                            <option>Billing Question</option>
+                            <option>Partnership Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-slate-700">Message</label>
+                        <textarea rows="5" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 focus:outline-none focus:border-blue-500 transition" placeholder="Tell us more about your issue..."></textarea>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <input type="checkbox" id="urgent" class="w-4 h-4 text-blue-600 rounded border-slate-300">
+                        <label for="urgent" class="text-sm text-slate-600">Mark as priority shipment issue</label>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg transition uppercase tracking-widest">
+                        Submit Ticket
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-gradient text-slate-400 pt-24 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 relative z-10">
+            <div class="space-y-6">
+                <div class="flex items-center space-x-2 text-white">
+                    <div class="bg-blue-600 p-1.5 rounded">
+                        <i class="fas fa-bridge text-white text-lg"></i>
+                    </div>
+                    <span class="text-2xl font-bold">GlobalBridge</span>
+                </div>
+                <p class="text-sm leading-relaxed">
+                    Headquartered in London with regional hubs in Singapore, New York, and Dubai.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Services</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Ocean Freight</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Air Cargo</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Support</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Track Shipment</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Knowledge Base</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Contact Us</h4>
+                <div class="space-y-5 text-sm">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-phone text-blue-500 mt-1"></i>
+                        <span>+1 (800) 555-BRIDGE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-10 border-t border-white/10 text-center text-xs relative z-10">
+            <p>&copy; 2024 GlobalBridge Logistics Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

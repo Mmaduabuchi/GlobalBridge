@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Shipment | GlobalBridge Logistics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-dark: #0f172a;
+            --navy-primary: #1e293b;
+            --silver-accent: #94a3b8;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Lexend', sans-serif;
+        }
+        .tracking-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .status-line {
+            position: relative;
+        }
+        .status-line::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+            z-index: 0;
+        }
+        .status-dot {
+            position: relative;
+            z-index: 1;
+        }
+        .footer-gradient {
+            background: linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.92)), 
+                        url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 nav-scrolled">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="bg-blue-600 p-2 rounded-lg">
+                        <i class="fas fa-bridge text-white text-xl"></i>
+                    </div>
+                    <span class="text-white text-2xl font-bold tracking-tight">GlobalBridge</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-slate-200 font-medium">
+                <a href="index.html" class="hover:text-blue-400 transition">Dashboard</a>
+                <a href="support.html" class="hover:text-blue-400 transition">Help Center</a>
+                <a href="#" class="text-blue-400">Shipment Tracking</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg">
+                    New Shipment
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tracking Hero Search -->
+    <header class="tracking-hero pt-48 pb-24 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Track Your Cargo</h1>
+            <p class="text-xl text-slate-300 mb-10">Real-time GPS visibility across all international borders.</p>
+            <div class="relative max-w-2xl mx-auto">
+                <input type="text" value="GB-774209118" class="w-full py-5 px-14 rounded-2xl bg-white shadow-2xl text-slate-800 font-bold focus:outline-none focus:ring-4 focus:ring-blue-500/20 transition text-lg">
+                <i class="fas fa-barcode absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 text-xl"></i>
+                <button class="absolute right-3 top-1/2 -translate-y-1/2 bg-blue-600 text-white px-6 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition">Track</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tracking Results Content -->
+    <main class="max-w-7xl mx-auto px-6 py-12 -mt-12 relative z-10">
+        <div class="grid lg:grid-cols-3 gap-8">
+            
+            <!-- Left: Shipment Progress -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Status Header Card -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                    <div class="flex flex-wrap justify-between items-start mb-8 gap-4">
+                        <div>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold uppercase tracking-wider">In Transit</span>
+                            <h2 class="text-3xl font-bold text-navy-dark mt-2">Expected Arrival: Oct 14</h2>
+                            <p class="text-slate-500">Last updated: 2 hours ago from Singapore Hub</p>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button class="p-3 bg-slate-100 rounded-xl hover:bg-slate-200 transition text-slate-600"><i class="fas fa-share-nodes"></i></button>
+                            <button class="p-3 bg-slate-100 rounded-xl hover:bg-slate-200 transition text-slate-600"><i class="fas fa-print"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar Component -->
+                    <div class="relative pt-4 pb-12">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-xs font-bold text-blue-600">Origin: London, UK</span>
+                            <span class="text-xs font-bold text-slate-400">Destination: Sydney, AU</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden flex">
+                            <div class="bg-blue-600 h-full w-[65%] rounded-full relative">
+                                <div class="absolute right-0 top-0 bottom-0 w-8 bg-blue-400/50 animate-pulse"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between mt-4 text-[10px] uppercase font-black tracking-widest text-slate-400">
+                            <div class="text-blue-600"><i class="fas fa-check-circle mr-1"></i> Picked Up</div>
+                            <div class="text-blue-600"><i class="fas fa-check-circle mr-1"></i> Departed</div>
+                            <div class="text-blue-600">In Transit</div>
+                            <div>Out for Delivery</div>
+                            <div>Delivered</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Milestones -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-navy-dark mb-8">Travel History</h3>
+                    <div class="status-line space-y-10">
+                        <!-- Current Milestone -->
+                        <div class="flex items-start space-x-6">
+                            <div class="status-dot w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white ring-4 ring-blue-100">
+                                <i class="fas fa-ship text-xs"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-navy-dark">Vessel Departed from Hub</h4>
+                                    <span class="text-sm font-bold text-slate-800">Oct 11, 04:22 AM</span>
+                                </div>
+                                <p class="text-slate-500 text-sm mt-1">Singapore International Port (SGPTS) - Transit Stage 2</p>
+                            </div>
+                        </div>
+
+                        <!-- Previous Milestone -->
+                        <div class="flex items-start space-x-6">
+                            <div class="status-dot w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-slate-700">Customs Clearance Completed</h4>
+                                    <span class="text-sm text-slate-500">Oct 10, 08:15 PM</span>
+                                </div>
+                                <p class="text-slate-500 text-sm mt-1">Singapore Customs - Documentation Approved</p>
+                            </div>
+                        </div>
+
+                        <!-- Previous Milestone -->
+                        <div class="flex items-start space-x-6">
+                            <div class="status-dot w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-slate-700">Arrived at Sorting Facility</h4>
+                                    <span class="text-sm text-slate-500">Oct 09, 11:30 PM</span>
+                                </div>
+                                <p class="text-slate-500 text-sm mt-1">London Gateway Terminal (LHR-1)</p>
+                            </div>
+                        </div>
+
+                        <!-- Start Milestone -->
+                        <div class="flex items-start space-x-6">
+                            <div class="status-dot w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-slate-700">Shipment Picked Up</h4>
+                                    <span class="text-sm text-slate-500">Oct 08, 02:00 PM</span>
+                                </div>
+                                <p class="text-slate-500 text-sm mt-1">Oxford Business Park, Unit 4B, UK</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Shipment Info & Help -->
+            <div class="space-y-8">
+                <!-- Info Card -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                    <h3 class="text-lg font-bold text-navy-dark mb-6 border-b pb-4">Shipment Details</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-slate-500">Carrier:</span>
+                            <span class="font-bold text-navy-dark">GlobalBridge Air Fleet</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-slate-500">Service:</span>
+                            <span class="font-bold text-navy-dark">Priority Express Sea</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-slate-500">Weight:</span>
+                            <span class="font-bold text-navy-dark">1,240.50 kg</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-slate-500">Pieces:</span>
+                            <span class="font-bold text-navy-dark">4 Pallets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications Card -->
+                <div class="bg-blue-600 p-8 rounded-3xl shadow-xl text-white">
+                    <i class="fas fa-bell text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Get Alerts</h3>
+                    <p class="text-blue-100 text-sm mb-6">Receive real-time SMS and email notifications for every status change.</p>
+                    <input type="email" placeholder="Enter email address" class="w-full bg-blue-500/30 border border-blue-400/50 rounded-xl py-3 px-4 mb-3 placeholder-blue-200 text-white focus:outline-none">
+                    <button class="w-full bg-white text-blue-600 font-bold py-3 rounded-xl hover:bg-slate-100 transition">Subscribe</button>
+                </div>
+
+                <!-- Support Shortcut -->
+                <div class="bg-slate-100 p-8 rounded-3xl text-center">
+                    <h4 class="font-bold text-navy-dark mb-2">Need Help?</h4>
+                    <p class="text-slate-500 text-sm mb-6">Is there a problem with this shipment? Contact our 24/7 support team.</p>
+                    <a href="support.html" class="inline-block bg-white text-navy-dark font-bold px-6 py-3 rounded-xl border border-slate-200 hover:bg-slate-50 transition">
+                        Visit Help Center
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-gradient text-slate-400 pt-24 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 relative z-10">
+            <div class="space-y-6">
+                <div class="flex items-center space-x-2 text-white">
+                    <div class="bg-blue-600 p-1.5 rounded">
+                        <i class="fas fa-bridge text-white text-lg"></i>
+                    </div>
+                    <span class="text-2xl font-bold">GlobalBridge</span>
+                </div>
+                <p class="text-sm leading-relaxed">
+                    Headquartered in London with regional hubs in Singapore, New York, and Dubai.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="index.html" class="hover:text-blue-400 transition-colors">Home Page</a></li>
+                    <li><a href="support.html" class="hover:text-blue-400 transition-colors">Support Center</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Solutions</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Supply Chain</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Customs Portal</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Contact</h4>
+                <div class="space-y-5 text-sm">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-phone text-blue-500 mt-1"></i>
+                        <span>+1 (800) 555-BRIDGE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-10 border-t border-white/10 text-center text-xs relative z-10">
+            <p>&copy; 2024 GlobalBridge Logistics Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
